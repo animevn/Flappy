@@ -8,6 +8,8 @@ class GameScene: SKScene {
     private var bird:Bird!
     private var pipes:Pipes!
     private var ground:Ground!
+    private var score:Score!
+    
     private var actors = [ActorsController]()
     private var flap:Player?
     private var punch:Player?
@@ -54,6 +56,7 @@ class GameScene: SKScene {
         pipes = Pipes(topImg: "topPipe", bottomImg: "bottomPipe", parentNode: gameNode,
                       zPosition: 3, duration: 6, durationForNewPipe: 3.3)
         ground = Ground(image: "ground", parentNode: gameNode, zPosition: 4, duration: 5)
+        score = Score(parentNode: gameNode, zPosition: 5)
     }
     
     private func addActorsToList(){
@@ -125,7 +128,7 @@ extension GameScene:SKPhysicsContactDelegate{
     func didEnd(_ contact: SKPhysicsContact) {
         let collide = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         if collide == BodyType.bird.rawValue | BodyType.gap.rawValue{
-            print("one point")
+            score.increment()
         }
     }
 }

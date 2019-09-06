@@ -29,6 +29,33 @@ class Player{
     }
 }
 
+class Score{
+    
+    private var parentNode:SKSpriteNode
+    private var zPosition:CGFloat
+    private var lbScore:SKLabelNode
+    private var score = 0
+    
+    init(parentNode:SKSpriteNode, zPosition:CGFloat){
+        lbScore = SKLabelNode(text: "0")
+        self.parentNode = parentNode
+        self.zPosition = zPosition
+        
+        lbScore.fontName = "MarkerFelt-Wide"
+        lbScore.fontSize = 50
+        lbScore.fontColor = .orange
+        lbScore.position = CGPoint(x: screenSize().x/2, y: screenSize().y - 30)
+        lbScore.zPosition = zPosition
+        parentNode.addChild(lbScore)
+    }
+    
+    func increment(){
+        score += 1
+        lbScore.text = "\(score)"
+    }
+    
+}
+
 protocol ActorsController{
     func start()
     func stop()

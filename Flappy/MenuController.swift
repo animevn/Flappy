@@ -2,11 +2,11 @@ import UIKit
 
 class MenuController:UIViewController{
     
-    private var theme:MediaPlayer?
+    private var theme:Player?
     
     private func prepareThemeSound(){
         do{
-            theme = try MediaPlayer(filename: "theme", type: "mp3", loop: -1)
+            theme = try Player(filename: "theme", type: "mp3", loop: -1)
         }catch let error{
             print(error)
         }

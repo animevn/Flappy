@@ -16,7 +16,10 @@
 		F18F2BC3232157C100D714FB /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F2BC2232157C100D714FB /* Ground.swift */; };
 		F18F2BC523215C7500D714FB /* PipeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F2BC423215C7500D714FB /* PipeNode.swift */; };
 		F18F2BC72321642200D714FB /* Pipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F2BC62321642200D714FB /* Pipes.swift */; };
-		F1997A8423223B9400E815EA /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = F1997A8323223B9400E815EA /* sounds */; };
+		F1997A8E232243A600E815EA /* flap.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1997A8A232243A600E815EA /* flap.wav */; };
+		F1997A8F232243A600E815EA /* Pamgaea.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1997A8B232243A600E815EA /* Pamgaea.mp3 */; };
+		F1997A90232243A600E815EA /* punch.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1997A8C232243A600E815EA /* punch.wav */; };
+		F1997A91232243A600E815EA /* yeah.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1997A8D232243A600E815EA /* yeah.mp3 */; };
 		F1AB00492320BD7E00D6D81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB00482320BD7E00D6D81C /* AppDelegate.swift */; };
 		F1AB004F2320BD7E00D6D81C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB004E2320BD7E00D6D81C /* GameScene.swift */; };
 		F1AB00512320BD7E00D6D81C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB00502320BD7E00D6D81C /* GameController.swift */; };
@@ -34,7 +37,10 @@
 		F18F2BC2232157C100D714FB /* Ground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		F18F2BC423215C7500D714FB /* PipeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeNode.swift; sourceTree = "<group>"; };
 		F18F2BC62321642200D714FB /* Pipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipes.swift; sourceTree = "<group>"; };
-		F1997A8323223B9400E815EA /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sounds; sourceTree = "<group>"; };
+		F1997A8A232243A600E815EA /* flap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flap.wav; sourceTree = "<group>"; };
+		F1997A8B232243A600E815EA /* Pamgaea.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pamgaea.mp3; sourceTree = "<group>"; };
+		F1997A8C232243A600E815EA /* punch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = punch.wav; sourceTree = "<group>"; };
+		F1997A8D232243A600E815EA /* yeah.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yeah.mp3; sourceTree = "<group>"; };
 		F1AB00452320BD7E00D6D81C /* Flappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AB00482320BD7E00D6D81C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1AB004E2320BD7E00D6D81C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -68,6 +74,17 @@
 			path = Actors;
 			sourceTree = "<group>";
 		};
+		F1997A89232243A600E815EA /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F1997A8A232243A600E815EA /* flap.wav */,
+				F1997A8B232243A600E815EA /* Pamgaea.mp3 */,
+				F1997A8C232243A600E815EA /* punch.wav */,
+				F1997A8D232243A600E815EA /* yeah.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
 		F1AB003C2320BD7E00D6D81C = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +110,7 @@
 				F1AB00502320BD7E00D6D81C /* GameController.swift */,
 				F1AB004E2320BD7E00D6D81C /* GameScene.swift */,
 				F102592C2320F47F006A2AC3 /* Repo.swift */,
-				F1997A8323223B9400E815EA /* sounds */,
+				F1997A89232243A600E815EA /* sounds */,
 				F102592A2320F1BE006A2AC3 /* Assets.xcassets */,
 				F102593323211018006A2AC3 /* Game.storyboard */,
 				F1AB00572320BD7F00D6D81C /* Launch.storyboard */,
@@ -161,9 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F102593423211018006A2AC3 /* Game.storyboard in Resources */,
+				F1997A90232243A600E815EA /* punch.wav in Resources */,
 				F102592B2320F1BE006A2AC3 /* Assets.xcassets in Resources */,
-				F1997A8423223B9400E815EA /* sounds in Resources */,
 				F1AB00592320BD7F00D6D81C /* Launch.storyboard in Resources */,
+				F1997A91232243A600E815EA /* yeah.mp3 in Resources */,
+				F1997A8E232243A600E815EA /* flap.wav in Resources */,
+				F1997A8F232243A600E815EA /* Pamgaea.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

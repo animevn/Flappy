@@ -5,7 +5,7 @@ enum PlayerError:Error{
     case LoadError
 }
 
-class MediaPlayer{
+class Player{
     
     private var player:AVAudioPlayer
     
@@ -105,19 +105,6 @@ func screenSize()->(x:CGFloat, y:CGFloat, centerX:CGFloat, centerY:CGFloat){
         return (width, height - 50, center.x, center.y + 25)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

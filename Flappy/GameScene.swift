@@ -9,15 +9,16 @@ class GameScene: SKScene {
     private var pipes:Pipes!
     private var ground:Ground!
     private var actors = [ActorsController]()
-    private var flap:MediaPlayer?
-    private var punch:MediaPlayer?
-    private var yeah:MediaPlayer?
+    private var flap:Player?
+    private var punch:Player?
+    private var yeah:Player?
     
     private func prepareSound(){
+        
         do{
-            flap = try MediaPlayer(filename: "flap", type: "wav", loop: 0)
-            punch = try MediaPlayer(filename: "punch", type: "wav", loop: 0)
-            yeah = try MediaPlayer(filename: "yeah", type: "mp3", loop: 0)
+            flap = try Player(filename: "flap", type: "wav", loop: 0)
+            punch = try Player(filename: "punch", type: "wav", loop: 0)
+            yeah = try Player(filename: "yeah", type: "mp3", loop: 0)
         }catch let error{
             print(error)
         }

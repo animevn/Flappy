@@ -5,6 +5,7 @@ class GameScene: SKScene {
     private var gameNode:SKSpriteNode!
     private var sky:Sky!
     private var city:City!
+    private var bird:Bird!
     private var pipes:Pipes!
     private var ground:Ground!
     
@@ -25,11 +26,15 @@ class GameScene: SKScene {
         city = City(image: "city", parentNode: gameNode, zPosition: 1, duration: 90)
         city.start()
         
+        bird = Bird(images: ["bird1", "bird2"], parentNode: gameNode,
+                    position: CGPoint(x: screenSize().x/4, y: screenSize().y * 3/4) , zPosition: 2)
+        bird.start()
+        
         pipes = Pipes(topImg: "topPipe", bottomImg: "bottomPipe", parentNode: gameNode,
-                      zPosition: 2, duration: 6, durationForNewPipe: 3.3)
+                      zPosition: 3, duration: 6, durationForNewPipe: 3.3)
         pipes.start()
         
-        ground = Ground(image: "ground", parentNode: gameNode, zPosition: 3, duration: 5)
+        ground = Ground(image: "ground", parentNode: gameNode, zPosition: 4, duration: 5)
         ground.start()
     }
     

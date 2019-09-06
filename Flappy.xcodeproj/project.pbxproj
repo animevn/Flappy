@@ -20,6 +20,7 @@
 		F1AB004F2320BD7E00D6D81C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB004E2320BD7E00D6D81C /* GameScene.swift */; };
 		F1AB00512320BD7E00D6D81C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB00502320BD7E00D6D81C /* GameController.swift */; };
 		F1AB00592320BD7F00D6D81C /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AB00572320BD7F00D6D81C /* Launch.storyboard */; };
+		F1BAC9FF2321E40A0075FECD /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BAC9FE2321E40A0075FECD /* Bird.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F1AB00502320BD7E00D6D81C /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		F1AB00582320BD7F00D6D81C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Launch.storyboard; sourceTree = "<group>"; };
 		F1AB005A2320BD7F00D6D81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1BAC9FE2321E40A0075FECD /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				F10259312321001D006A2AC3 /* City.swift */,
 				F18F2BC62321642200D714FB /* Pipes.swift */,
 				F18F2BC423215C7500D714FB /* PipeNode.swift */,
+				F1BAC9FE2321E40A0075FECD /* Bird.swift */,
 				F18F2BC2232157C100D714FB /* Ground.swift */,
 			);
 			path = Actors;
@@ -173,6 +176,7 @@
 				F102592D2320F47F006A2AC3 /* Repo.swift in Sources */,
 				F1AB00512320BD7E00D6D81C /* GameController.swift in Sources */,
 				F1AB00492320BD7E00D6D81C /* AppDelegate.swift in Sources */,
+				F1BAC9FF2321E40A0075FECD /* Bird.swift in Sources */,
 				F102592F2320F97F006A2AC3 /* Sky.swift in Sources */,
 				F18F2BC3232157C100D714FB /* Ground.swift in Sources */,
 				F10259322321001D006A2AC3 /* City.swift in Sources */,

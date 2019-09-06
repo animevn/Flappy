@@ -17,7 +17,7 @@
 		F18F2BC523215C7500D714FB /* PipeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F2BC423215C7500D714FB /* PipeNode.swift */; };
 		F18F2BC72321642200D714FB /* Pipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F2BC62321642200D714FB /* Pipes.swift */; };
 		F1997A8E232243A600E815EA /* flap.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1997A8A232243A600E815EA /* flap.wav */; };
-		F1997A8F232243A600E815EA /* Pamgaea.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1997A8B232243A600E815EA /* Pamgaea.mp3 */; };
+		F1997A8F232243A600E815EA /* theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1997A8B232243A600E815EA /* theme.mp3 */; };
 		F1997A90232243A600E815EA /* punch.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1997A8C232243A600E815EA /* punch.wav */; };
 		F1997A91232243A600E815EA /* yeah.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1997A8D232243A600E815EA /* yeah.mp3 */; };
 		F1AB00492320BD7E00D6D81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB00482320BD7E00D6D81C /* AppDelegate.swift */; };
@@ -38,7 +38,7 @@
 		F18F2BC423215C7500D714FB /* PipeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeNode.swift; sourceTree = "<group>"; };
 		F18F2BC62321642200D714FB /* Pipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipes.swift; sourceTree = "<group>"; };
 		F1997A8A232243A600E815EA /* flap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flap.wav; sourceTree = "<group>"; };
-		F1997A8B232243A600E815EA /* Pamgaea.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pamgaea.mp3; sourceTree = "<group>"; };
+		F1997A8B232243A600E815EA /* theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = theme.mp3; sourceTree = "<group>"; };
 		F1997A8C232243A600E815EA /* punch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = punch.wav; sourceTree = "<group>"; };
 		F1997A8D232243A600E815EA /* yeah.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yeah.mp3; sourceTree = "<group>"; };
 		F1AB00452320BD7E00D6D81C /* Flappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				F1997A8A232243A600E815EA /* flap.wav */,
-				F1997A8B232243A600E815EA /* Pamgaea.mp3 */,
+				F1997A8B232243A600E815EA /* theme.mp3 */,
 				F1997A8C232243A600E815EA /* punch.wav */,
 				F1997A8D232243A600E815EA /* yeah.mp3 */,
 			);
@@ -183,7 +183,7 @@
 				F1AB00592320BD7F00D6D81C /* Launch.storyboard in Resources */,
 				F1997A91232243A600E815EA /* yeah.mp3 in Resources */,
 				F1997A8E232243A600E815EA /* flap.wav in Resources */,
-				F1997A8F232243A600E815EA /* Pamgaea.mp3 in Resources */,
+				F1997A8F232243A600E815EA /* theme.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,10 @@ class GameScene: SKScene {
     private var punch:Player?
     private var yeah:Player?
     
+    var viewController:UIViewController?
+    var restart:(()->Void)?
+    var quit:(()->Void)?
+    
     private func prepareSound(){
         
         do{
@@ -86,6 +90,27 @@ class GameScene: SKScene {
 
 extension GameScene:SKPhysicsContactDelegate{
     
+    private func createAlert(){
+        let alert = UIAlertController(title: "Ouch!!!",
+                                      message: "Would you play again?",
+                                      preferredStyle: .alert)
+        let actionOK = UIAlertAction(
+            title: "OK",
+            style: .default,
+            handler: {action in self.restart!()})
+        
+        let actionCancel = UIAlertAction(
+            title: "Cancel",
+            style: .default,
+            handler: {action in
+            self.quit!()
+        })
+        
+        alert.addAction(actionOK)
+        alert.addAction(actionCancel)
+        viewController?.present(alert, animated: true, completion: nil)
+    }
+    
     func didBegin(_ contact: SKPhysicsContact) {
         let collide = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         if collide == BodyType.bird.rawValue | BodyType.ground.rawValue
@@ -93,6 +118,7 @@ extension GameScene:SKPhysicsContactDelegate{
             punch?.play()
             stopActors()
             gameNode.run(SKAction.shake(duration: 1, impactX: 20, impactY: 20))
+            createAlert()
         }
     }
     

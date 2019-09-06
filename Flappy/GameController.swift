@@ -13,15 +13,11 @@ class GameController: UIViewController {
         skView.showsNodeCount = true
         skView.showsPhysics = true
         skView.presentScene(scene)
-        
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         createView()
-        
     }
 
     override var prefersStatusBarHidden: Bool {

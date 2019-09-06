@@ -16,6 +16,7 @@
 		F18F2BC3232157C100D714FB /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F2BC2232157C100D714FB /* Ground.swift */; };
 		F18F2BC523215C7500D714FB /* PipeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F2BC423215C7500D714FB /* PipeNode.swift */; };
 		F18F2BC72321642200D714FB /* Pipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18F2BC62321642200D714FB /* Pipes.swift */; };
+		F1997A8423223B9400E815EA /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = F1997A8323223B9400E815EA /* sounds */; };
 		F1AB00492320BD7E00D6D81C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB00482320BD7E00D6D81C /* AppDelegate.swift */; };
 		F1AB004F2320BD7E00D6D81C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB004E2320BD7E00D6D81C /* GameScene.swift */; };
 		F1AB00512320BD7E00D6D81C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB00502320BD7E00D6D81C /* GameController.swift */; };
@@ -33,6 +34,7 @@
 		F18F2BC2232157C100D714FB /* Ground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		F18F2BC423215C7500D714FB /* PipeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipeNode.swift; sourceTree = "<group>"; };
 		F18F2BC62321642200D714FB /* Pipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipes.swift; sourceTree = "<group>"; };
+		F1997A8323223B9400E815EA /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sounds; sourceTree = "<group>"; };
 		F1AB00452320BD7E00D6D81C /* Flappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AB00482320BD7E00D6D81C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1AB004E2320BD7E00D6D81C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -85,12 +87,13 @@
 		F1AB00472320BD7E00D6D81C /* Flappy */ = {
 			isa = PBXGroup;
 			children = (
+				F10259302320FF53006A2AC3 /* Actors */,
 				F1AB00482320BD7E00D6D81C /* AppDelegate.swift */,
 				F10259282320E5DA006A2AC3 /* MenuController.swift */,
 				F1AB00502320BD7E00D6D81C /* GameController.swift */,
 				F1AB004E2320BD7E00D6D81C /* GameScene.swift */,
-				F10259302320FF53006A2AC3 /* Actors */,
 				F102592C2320F47F006A2AC3 /* Repo.swift */,
+				F1997A8323223B9400E815EA /* sounds */,
 				F102592A2320F1BE006A2AC3 /* Assets.xcassets */,
 				F102593323211018006A2AC3 /* Game.storyboard */,
 				F1AB00572320BD7F00D6D81C /* Launch.storyboard */,
@@ -159,6 +162,7 @@
 			files = (
 				F102593423211018006A2AC3 /* Game.storyboard in Resources */,
 				F102592B2320F1BE006A2AC3 /* Assets.xcassets in Resources */,
+				F1997A8423223B9400E815EA /* sounds in Resources */,
 				F1AB00592320BD7F00D6D81C /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

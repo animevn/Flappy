@@ -2,6 +2,16 @@ import UIKit
 
 class MenuController:UIViewController{
     
+    private var theme:MediaPlayer?
+    
+    private func prepareThemeSound(){
+        do{
+            theme = try MediaPlayer(filename: "theme", type: "mp3", loop: -1)
+        }catch let error{
+            print(error)
+        }
+    }
+    
     private func createButton(title:String, color:UIColor, center:CGPoint, action:Selector){
         let button = UIButton()
         button.frame = CGRect(x: 0, y: 0, width: screenSize().x/2.5, height: screenSize().y/10)
@@ -26,6 +36,7 @@ class MenuController:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .green
+        prepareThemeSound()
         
         createButton(
             title: "PLAY",
@@ -38,6 +49,7 @@ class MenuController:UIViewController{
             color: .black,
             center: CGPoint(x: screenSize().x/2, y: screenSize().y * 2/3),
             action: #selector(gameCenter))
+        theme?.play()
     }
 }
 

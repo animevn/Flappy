@@ -13,6 +13,11 @@ class Ground:ActorsController{
         let node = SKSpriteNode(imageNamed: image)
         node.size = CGSize(width: parentNode.size.width, height: parentNode.size.height * 1/8)
         node.position = CGPoint(x: parentNode.size.width/2, y: parentNode.size.height * 1/16)
+        node.physicsBody = SKPhysicsBody.body(size: node.size, complete: {
+            $0.affectedByGravity = false
+            $0.isDynamic = false
+            $0.categoryBitMask = BodyType.ground.rawValue
+        })
         node.blendMode = .replace
         return node
     }
@@ -21,6 +26,11 @@ class Ground:ActorsController{
         let node = SKSpriteNode(imageNamed: image)
         node.size = CGSize(width: parentNode.size.width, height: parentNode.size.height * 1/8)
         node.position = CGPoint(x: parentNode.size.width * 3/2, y: parentNode.size.height * 1/16)
+        node.physicsBody = SKPhysicsBody.body(size: node.size, complete: {
+            $0.affectedByGravity = false
+            $0.isDynamic = false
+            $0.categoryBitMask = BodyType.ground.rawValue
+        })
         node.blendMode = .replace
         return node
     }

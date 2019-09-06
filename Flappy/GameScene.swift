@@ -10,6 +10,15 @@ class GameScene: SKScene {
     private var ground:Ground!
     private var actors = [ActorsController]()
     
+    private func createPhysicsWorld(){
+        physicsWorld.gravity = CGVector(dx: 0, dy: 0)
+        physicsWorld.contactDelegate = self
+        isUserInteractionEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            self.physicsWorld.gravity = CGVector(dx: 0, dy: -3)
+            self.isUserInteractionEnabled = true
+        })
+    }
     
     private func createView(){
         gameNode = SKSpriteNode(color: .clear, size: scene!.size)
@@ -43,19 +52,39 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         backgroundColor = .green
+        createPhysicsWorld()
         createView()
         createActors()
         addActorsToList()
         startActors()
     }
     
-    
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        bird.flap()
     }
     
     override func update(_ currentTime: TimeInterval) {
-        
+        bird.update()
     }
+}
+
+extension GameScene:SKPhysicsContactDelegate{
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        let collide = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        if collide == BodyType.bird.rawValue | BodyType.ground.rawValue
+            || collide == BodyType.bird.rawValue | BodyType.pipe.rawValue{
+            
+            stopActors()
+        }
+    }
+    
+    func didEnd(_ contact: SKPhysicsContact) {
+        let collide = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        if collide == BodyType.bird.rawValue | BodyType.gap.rawValue{
+            print("one point")
+        }
+    }
+    
+    
 }

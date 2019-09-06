@@ -20,6 +20,14 @@ class Bird:ActorsController{
         bird = SKSpriteNode(imageNamed: images.first!)
         bird.position = position
         bird.zPosition = zPosition
+        bird.physicsBody = SKPhysicsBody.body(size: bird.size, complete: {
+            $0.affectedByGravity = true
+            $0.isDynamic = true
+            $0.categoryBitMask = BodyType.bird.rawValue
+            $0.collisionBitMask = BodyType.bird.rawValue
+            $0.contactTestBitMask = BodyType.pipe.rawValue | BodyType.ground.rawValue
+                                    | BodyType.gap.rawValue
+        })
         parentNode.addChild(bird)
     }
     
@@ -40,5 +48,23 @@ class Bird:ActorsController{
     
     func stop() {
         bird.removeAllActions()
+        bird.physicsBody?.isDynamic = false
+    }
+    
+    func update(){
+        guard let dy = bird.physicsBody?.velocity.dy else {return}
+        switch dy{
+        case let dy where dy > 30:
+            bird.zRotation = CGFloat.pi/4
+        case dy where dy < -100:
+            bird.zRotation = -CGFloat.pi/3
+        default:
+            return
+        }
+    }
+    
+    func flap(){
+        bird.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+        bird.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 8))
     }
 }

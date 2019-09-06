@@ -9,6 +9,19 @@ class GameScene: SKScene {
     private var pipes:Pipes!
     private var ground:Ground!
     private var actors = [ActorsController]()
+    private var flap:MediaPlayer?
+    private var punch:MediaPlayer?
+    private var yeah:MediaPlayer?
+    
+    private func prepareSound(){
+        do{
+            flap = try MediaPlayer(filename: "flap", type: "wav", loop: 0)
+            punch = try MediaPlayer(filename: "punch", type: "wav", loop: 0)
+            yeah = try MediaPlayer(filename: "yeah", type: "mp3", loop: 0)
+        }catch let error{
+            print(error)
+        }
+    }
     
     private func createPhysicsWorld(){
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
@@ -52,6 +65,7 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         backgroundColor = .green
+        prepareSound()
         createPhysicsWorld()
         createView()
         createActors()
@@ -61,6 +75,7 @@ class GameScene: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         bird.flap()
+        flap?.play()
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -74,8 +89,9 @@ extension GameScene:SKPhysicsContactDelegate{
         let collide = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         if collide == BodyType.bird.rawValue | BodyType.ground.rawValue
             || collide == BodyType.bird.rawValue | BodyType.pipe.rawValue{
-            
+            punch?.play()
             stopActors()
+            gameNode.run(SKAction.shake(duration: 1, impactX: 20, impactY: 20))
         }
     }
     
@@ -85,6 +101,4 @@ extension GameScene:SKPhysicsContactDelegate{
             print("one point")
         }
     }
-    
-    
 }
